@@ -50,7 +50,9 @@ public class CarrinhoTeste2 {
                 carrinho.add(caneta);
 		Produto menor;
 		menor = carrinho.menorProduto();
+                assertArrayEquals(carrinho, actuals);
 		assertArrayEquals(new Object[] { caneta }, new Object[] { menor });
+                assertArrayEquals(new Object[] { caneta }, new Object[] { carrinho.ultimoProduto() });
 	}
 
         @Test
@@ -64,7 +66,7 @@ public class CarrinhoTeste2 {
                 carrinho.add(caneta);
 		Produto menor;
                 menor = carrinho.menorProduto();
-                assertArrayEquals(new Object[] carrinho, new Object[] {  });
+                assertArrayEquals(new Object[] { carrinho }, new Object[] {  });
         }
         
         
